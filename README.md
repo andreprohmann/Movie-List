@@ -1,8 +1,11 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pagina desenvolvida em React utilizando a API do The Movie Database
 
-Currently, two official plugins are available:
+Link para o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://movie-list-pi-ecru.vercel.app/
+
+Link da API
+
+https://www.themoviedb.org/?language=pt-BR
