@@ -1,4 +1,4 @@
-    .Header {
+    .Header{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -6,17 +6,21 @@
         background-color: #1d1d1d;
     
         h1 {
-        color: white;
+            color: white;
         }
     
         input {
-        padding: 0.5rem 1rem;
-        border-radius: 15px;
-        border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            border: none;
         }
     
         input:focus {
-        border: none;
-        outline: none;
+            border: none;
+            outline: none;
         }
     }
+
+    // .header{
+    //     color: white;
+    // }

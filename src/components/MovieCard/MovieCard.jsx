@@ -1,11 +1,13 @@
 
 import { Link } from 'react-router-dom'
+import "./index.scss";
 
 const MovieCard = ({ movieProp }) => {
   return (
-    <div className="movieCard">
-        <div className="movie-imge">
-          <img src={`https://image/tmbd.org/t/p/w1280${movieProp.poster_path}`} alt={movieProp.title} />
+    <div className="MovieCard">
+        <div className="movie-image">
+          <img src={`https://image.tmdb.org/t/p/w1280${movieProp.poster_path}`}
+              alt=""/>
         </div>
         <div className="movie-description">
           <h3> {movieProp.title}</h3>

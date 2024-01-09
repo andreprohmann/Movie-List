@@ -1,29 +1,44 @@
 import { useEffect, useState } from 'react'
 import { MovieService } from './../../api/MoviesService';
 import MovieCard from '../../components/MovieCard/MovieCard.jsx';
+import "./index.scss";
 
-const Home = () => {
+const Home = ({ searchValueProp }) => {
     const [movies, setMovies] = useState([])
     
     async function getMovies(){
-        const {data: {results}} = await MovieService.getMovies();
+        const {data: {results},} = await MovieService.getMovies();
     
         setMovies(results);
     }
+
+    async function getMoviesSearch (movieString) {
+        const {data: {results},} = await MovieService.searchMovies(movieString)
+
+        setMovies(results);
+    }
+
     useEffect(() =>{
         getMovies();
         
     },[]);
 
     useEffect(() =>{
-        console.log(movies)
+        if(searchValueProp){
+            getMoviesSearch(searchValueProp);
+        }
+        if(searchValueProp === ""){
+            getMovies()
+        }
         
-    });
+    },[searchValueProp]);
+
+    
 
     return (
         <section className='Home' >
             {
-                movies.map(({movie}) => (
+                movies.map((movie) => (
                     <div key={movie.id}> 
                         <MovieCard movieProp={movie}/>                   
                     </div>

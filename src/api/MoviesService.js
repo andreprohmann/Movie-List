@@ -11,10 +11,10 @@ export class MovieService {
     }
 
     static getMoviesDetails(id) {
-        return axios(withBaseUrl(` movie/${id} `));
+        return axios(withBaseUrl(`movie/${id}`));
     }
     static searchMovies(movie) {
-        return axios(withBaseUrl("search/movie") + ` &query=${movie} `);
+        return axios(withBaseUrl("search/movie") + `&query=${movie}`);
     }
 }
 
